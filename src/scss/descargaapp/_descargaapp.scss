@@ -1,0 +1,48 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+
+.descarga{
+    background-color: v.$grisClaro;
+    padding: 5rem 0;
+}
+
+.descarga__grid{
+    display: flex;
+    flex-direction: column-reverse;
+    @include m.tablet{
+        @include m.grid(2,2rem);
+        align-items: center;
+    }
+}
+
+.descarga__info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.descarga__tiendas{
+    @include m.grid(2,2rem);
+}
+
+.descarga__mensaje{
+    color: v.$secundario;
+    margin-bottom: 0;
+}
+
+.descarga__app{
+    margin-top: 5rem ;
+    width: 50%;
+    margin-inline:auto;
+    @include m.tablet { 
+        margin: 0 auto;
+    }
+}
+
+.tienda{
+    transition: transform .3s ease;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}

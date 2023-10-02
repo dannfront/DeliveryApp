@@ -1,0 +1,39 @@
+@use'../base/variables'as v;
+@use'../base/mixins'as m;
+
+// .fucionalidad{
+//     position: relative;
+//     height: 50rem;
+// }
+
+.fucionalidad{
+    margin-top: 10rem;
+    @include m.tablet { 
+        margin-top: 5rem;
+
+    }
+}
+.funcionalidad__heading{
+    color: v.$blanco;
+    text-align: center;
+}
+.funcionalidad__span{
+    font-size: 2rem;
+}
+.fucionalidad_explicacion{
+    margin-top: -0.1rem;
+    background-color: v.$primario
+}
+.fucionalidad__grid{
+
+    @include m.tablet { 
+        @include m.grid(3, 5rem);
+    }
+}
+.funcionalidad__items{
+    transition: transform .3s ease;
+    &:hover{
+        cursor: pointer;
+        transform: rotate(-3deg) scale(1.1);
+    }
+}

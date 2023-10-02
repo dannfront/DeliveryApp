@@ -1,0 +1,19 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+
+.Ganadinero{
+    padding: 5rem 0
+}
+.Ganadinero__title{
+    color: v.$secundario;
+}
+.Ganadinero__grid{
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+        align-items: center
+    }
+}
+
+.Ganadinero__button{
+    @include m.boton(v.$primario, v.$blanco);
+}

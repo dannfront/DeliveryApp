@@ -1,0 +1,90 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    gap: 5rem;
+
+    @include m.desktop{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.logo{
+    width: 30rem;
+    height: auto;
+    
+}
+.navegacion__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; 
+    width: 100%;
+    @include m.desktop{
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+    }
+}
+.navegacion__link{
+    color: v.$negro;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.navegacion__link--registrar{
+    color: v.$negro;
+    @include m.boton(v.$primario, v.$blanco);
+    
+}
+.formulario__button{
+    display: inline-block;
+    margin-top: 2rem;
+    @include m.boton(v.$secundario, v.$blanco);
+    @include m.tablet{
+        width: 100%;
+     } 
+ }
+
+.formulario{
+
+    @include m.tablet{
+        @include m.grid(2, 5rem);
+    }
+}
+.formulario__contenido{
+    margin-bottom: 5rem;
+    background-color: v.$primario;
+    padding: 5rem;
+}
+
+.heading__formualrio{
+    font-size: 3.6rem;
+    color: v.$blanco;
+    text-align: center;
+}
+
+.formulario__dibujo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario__label{
+    font-size: 2rem;
+    color: v.$blanco;
+    display: block;
+    margin-bottom: 1rem;
+}
+.formulario__input{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: none;
+    margin-bottom: 2rem;
+}
+
